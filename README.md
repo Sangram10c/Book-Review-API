@@ -108,10 +108,11 @@ curl -X POST http://localhost:3000/api/reviews \
 Schemas (Mongoose Models):
 
 🔹 User
+    
     {
-    username: String,
-    email: String,
-    password: String // hashed
+        username: String,
+        email: String,
+        password: String // hashed
     }
 
 
