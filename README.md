@@ -7,7 +7,7 @@ A Node.js + Express.js + MongoDB-based RESTful API for managing book reviews, us
 
 1. Clone the repository:
 
-    git clone https://github.com/your-username/book-review-api.git
+    git@github.com:Sangram10c/Book-Review-API.git
     cd book-review-api
 
 
@@ -36,6 +36,7 @@ A Node.js + Express.js + MongoDB-based RESTful API for managing book reviews, us
     npx nodemon app.js
 
 
+
 ## ▶️ How to Run Locally
 
   After starting the server (via npm start or node app.js), your API will be accessible at:
@@ -50,6 +51,7 @@ You can test routes using:
 
 
 
+
 ## 📬 Example API Requests
 
 🔐 User Signup
@@ -60,12 +62,14 @@ curl -X POST http://localhost:3000/api/auth/signup \
 -d '{"username": "john", "email": "john@example.com", "password": "123456"}'
 
 
+
 🔐 User Login (Get JWT Token)
 
 
 curl -X POST http://localhost:3000/api/auth/login \
 -H "Content-Type: application/json" \
 -d '{"email": "john@example.com", "password": "123456"}'
+
 
 
 📘 Add a Book (Requires JWT)
@@ -76,10 +80,14 @@ curl -X POST http://localhost:3000/api/books \
 -d '{"title": "Clean Code", "author": "Robert C. Martin", "description": "Great book!"}'
 
 
+
+
 🔍 Search Books with Pagination
 
 
 curl "http://localhost:3000/api/books/search?q=clean&page=1&limit=5"
+
+
 
 
 📝 Post a Review for a Book
@@ -92,6 +100,8 @@ curl -X POST http://localhost:3000/api/reviews \
 
 
 
+
+
 ## 🧠 Design Decisions / Assumptions
 
 * MongoDB is used for schema-less flexibility and JSON-like storage.
@@ -101,6 +111,8 @@ curl -X POST http://localhost:3000/api/reviews \
 * Pagination is available in the book search endpoint.
 * Reviews are linked to both the user and the book.
 * Authentication is required for posting reviews or adding books.
+
+
 
 
 ## 🗃️ Database Schema Overview
@@ -118,23 +130,23 @@ Schemas (Mongoose Models):
 
 🔹 Book
 
-   {
-      title: String,
-      author: String,
-      description: String,
-      createdAt: Date
-    }
+       {
+          title: String,
+          author: String,
+          description: String,
+          createdAt: Date
+        }
 
 
 🔹 Review
 
-   {
-      user: ObjectId (ref: User),
-      book: ObjectId (ref: Book),
-      rating: Number (1 to 5),
-      comment: String,
-      createdAt: Date
-    }
+       {
+          user: ObjectId (ref: User),
+          book: ObjectId (ref: Book),
+          rating: Number (1 to 5),
+          comment: String,
+          createdAt: Date
+        }
 
 
 
