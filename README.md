@@ -58,27 +58,27 @@ You can test routes using:
 🔐 User Signup
 
 
-curl -X POST http://localhost:3000/api/auth/signup \
--H "Content-Type: application/json" \
--d '{"username": "john", "email": "john@example.com", "password": "123456"}'
+    curl -X POST http://localhost:3000/api/auth/signup \
+    -H "Content-Type: application/json" \
+    -d '{"username": "john", "email": "john@example.com", "password": "123456"}'
 
 
 
 🔐 User Login (Get JWT Token)
 
 
-curl -X POST http://localhost:3000/api/auth/login \
--H "Content-Type: application/json" \
--d '{"email": "john@example.com", "password": "123456"}'
+    curl -X POST http://localhost:3000/api/auth/login \
+    -H "Content-Type: application/json" \
+    -d '{"email": "john@example.com", "password": "123456"}'
 
 
 
 📘 Add a Book (Requires JWT)
 
-curl -X POST http://localhost:3000/api/books \
--H "Authorization: Bearer YOUR_TOKEN_HERE" \
--H "Content-Type: application/json" \
--d '{"title": "Clean Code", "author": "Robert C. Martin", "description": "Great book!"}'
+    curl -X POST http://localhost:3000/api/books \
+    -H "Authorization: Bearer YOUR_TOKEN_HERE" \
+    -H "Content-Type: application/json" \
+    -d '{"title": "Clean Code", "author": "Robert C. Martin", "description": "Great book!"}'
 
 
 
@@ -86,7 +86,7 @@ curl -X POST http://localhost:3000/api/books \
 🔍 Search Books with Pagination
 
 
-curl "http://localhost:3000/api/books/search?q=clean&page=1&limit=5"
+    curl "http://localhost:3000/api/books/search?q=clean&page=1&limit=5"
 
 
 
@@ -94,10 +94,10 @@ curl "http://localhost:3000/api/books/search?q=clean&page=1&limit=5"
 📝 Post a Review for a Book
 
 
-curl -X POST http://localhost:3000/api/reviews \
--H "Authorization: Bearer YOUR_TOKEN_HERE" \
--H "Content-Type: application/json" \
--d '{"bookId": "BOOK_ID", "rating": 5, "comment": "Must read!"}'
+    curl -X POST http://localhost:3000/api/reviews \
+    -H "Authorization: Bearer YOUR_TOKEN_HERE" \
+    -H "Content-Type: application/json" \
+    -d '{"bookId": "BOOK_ID", "rating": 5, "comment": "Must read!"}'
 
 
 
