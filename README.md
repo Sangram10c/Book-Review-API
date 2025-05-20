@@ -7,23 +7,24 @@ A Node.js + Express.js + MongoDB-based RESTful API for managing book reviews, us
 
 1. Clone the repository:
 
-    git@github.com:Sangram10c/Book-Review-API.git
+    Sangram10c/Book-Review-API.git
+   
     cd book-review-api
 
 
-2. Install dependencies:
+3. Install dependencies:
 
     npm install
 
 
-3. Set up environment variables:
+4. Set up environment variables:
      Create a .env file in the root directory:
 
      PORT=3000
      MONGODB_URI=mongodb://localhost:27017/bookreview
      JWT_SECRET=your_secret_key_here
 
-4. Start MongoDB:
+5. Start MongoDB:
    
      Ensure MongoDB is running locally (default port 27017)
 
