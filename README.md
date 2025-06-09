@@ -1,4 +1,3 @@
-
 # 📚 Book Review API
 
 A Node.js + Express.js + MongoDB-based RESTful API for managing book reviews, users, and search functionality with JWT-based authentication.
