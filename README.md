@@ -37,7 +37,6 @@ A Node.js + Express.js + MongoDB-based RESTful API for managing book reviews, us
     npx nodemon app.js
 
 
-
 ## ▶️ How to Run Locally
 
   After starting the server (via npm start or node app.js), your API will be accessible at:
