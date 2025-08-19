@@ -7,10 +7,7 @@ A Node.js + Express.js + MongoDB-based RESTful API for managing book reviews, us
 
 
 
-1. Clone the repository:
-2. 
-
-    Sangram10c/Book-Review-API.git
+1. Clone the repository: Sangram10c/Book-Review-API.git
    
     cd book-review-api
 
